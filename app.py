@@ -13,8 +13,8 @@ from sklearn.metrics import classification_report
 import jinja2
 
 
-model = pickle.load(open('E:\mypython\ML_Deployment\Titanic Mode\Titanic Mode.pkl', 'rb'))
-X_train = pd.read_csv(r'E:\mypython\ML_Deployment\Titanic Mode\X_train.csv')
+model = pickle.load(open('Titanic Mode.pkl', 'rb'))
+X_train = pd.read_csv('X_train.csv')
 
 explainer = LimeTabularExplainer(X_train.values, 
                                  feature_names=X_train.columns.values.tolist(), 
